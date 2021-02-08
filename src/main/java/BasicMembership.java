@@ -4,8 +4,8 @@ public class BasicMembership extends Membership {
     private int newBonusPointsBalance;
     private final static String membershipName = "BASIC";
 
-    public BasicMembership(int bonusPointBalance, int newPoints) {
-        super(bonusPointBalance, newPoints);
+    public BasicMembership(int bonusPointBalance) {
+        super(bonusPointBalance);
     }
 
     @Override

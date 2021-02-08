@@ -6,8 +6,8 @@ public class GoldMembership extends Membership {
     private final static float POINTS_SCALING_FACTOR_1 = 1.3f;
     private final static float POINTS_SCALING_FACTOR_2 = 1.5f;
 
-    public GoldMembership(int bonusPointBalance, int newPoints) {
-        super(bonusPointBalance, newPoints);
+    public GoldMembership(int bonusPointBalance) {
+        super(bonusPointBalance);
     }
 
     @Override

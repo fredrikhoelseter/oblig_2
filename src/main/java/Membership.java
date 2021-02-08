@@ -7,9 +7,8 @@ public class Membership {
     private int newPoints;
 
 
-    public Membership (int bonusPointBalance, int newPoints) {
+    public Membership (int bonusPointBalance) {
         this.bonusPointBalance = bonusPointBalance;
-        this.newPoints = newPoints;
     }
 
     public int RegisterPoints(int bonusPointBalance, int newPoints) {
