@@ -10,7 +10,7 @@ public class BasicMembership extends Membership {
 
     @Override
     public int RegisterPoints(int bonusPointBalance, int newPoints) {
-        newBonusPointsBalance = super.getBonusPointBalance() + super.getNewPoints();
+        newBonusPointsBalance = bonusPointBalance + newPoints;
         return newBonusPointsBalance;
     }
 

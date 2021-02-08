@@ -11,6 +11,7 @@ public class BonusMember {
     private String eMailAddress;
     private String password;
     private Membership membership;
+    private String membershipName;
 
     //constants
     private static final int SILVER_LIMIT = 25000;
@@ -36,15 +37,20 @@ public class BonusMember {
         this.eMailAddress = eMailAddress;
         this.password = password;
 
-        if (bonusPointBalance < 25000) {
+        checkAndSetMembership();
+    }
+
+    public void checkAndSetMembership() {
+        if (bonusPointBalance < SILVER_LIMIT) {
             membership = new BasicMembership(bonusPointBalance);
         }
-        if (bonusPointBalance >= 25000 && bonusPointBalance < 75000) {
+        if (bonusPointBalance >= SILVER_LIMIT && bonusPointBalance < GOLD_LIMIT) {
             membership = new SilverMembership(bonusPointBalance);
         }
-        if (bonusPointBalance >= 75000) {
+        if (bonusPointBalance >= GOLD_LIMIT) {
             membership = new GoldMembership(bonusPointBalance);
         }
+        membershipName = membership.getMembershipName();
     }
 
     /**
@@ -67,6 +73,7 @@ public class BonusMember {
     public void registerBonusPoints(int newPoints) {
         this.newPoints = newPoints;
         this.bonusPointBalance = membership.RegisterPoints(bonusPointBalance, newPoints);
+        checkAndSetMembership();
     }
 
     /**
@@ -115,5 +122,9 @@ public class BonusMember {
      */
     public String getPassword() {
         return password;
+    }
+
+    public String getMembershipName() {
+        return membershipName;
     }
 }

@@ -13,10 +13,10 @@ public class GoldMembership extends Membership {
     @Override
     public int RegisterPoints(int bonusPointBalance, int newPoints) {
         if (bonusPointBalance < 90000) {
-            newBonusPointsBalance = super.getBonusPointBalance() + Math.round(super.getNewPoints() * POINTS_SCALING_FACTOR_1);
+            newBonusPointsBalance = bonusPointBalance + Math.round(newPoints * POINTS_SCALING_FACTOR_1);
         }
         else {
-            newBonusPointsBalance = super.getBonusPointBalance() + Math.round(super.getNewPoints() * POINTS_SCALING_FACTOR_2);
+            newBonusPointsBalance = bonusPointBalance + Math.round(newPoints * POINTS_SCALING_FACTOR_2);
         }
 
         return newBonusPointsBalance;
