@@ -1,5 +1,9 @@
 import java.time.LocalDate;
 
+/**
+ *
+ * 
+ */
 public class BonusMember {
 
     //fields
