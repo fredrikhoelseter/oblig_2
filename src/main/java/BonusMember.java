@@ -1,8 +1,11 @@
 import java.time.LocalDate;
 
 /**
+ * The bonus member class holds information on a single bonus member.
+ * Provides functionality such as changing bonus points for the member,
+ * checking passwords, and checking and setting membership levels.
  *
- * 
+ * @author fredrik
  */
 public class BonusMember {
 
@@ -29,17 +32,15 @@ public class BonusMember {
      * @param bonusPoints The bonus points the member currently has.
      * @param name The name of the member
      * @param eMailAddress The email address of the member
-     * @param password The password of the member
      */
     public BonusMember(int memberNumber, LocalDate enrolledDate, int bonusPoints,
-                       String name, String eMailAddress, String password) {
+                       String name, String eMailAddress) {
 
         this.memberNumber = memberNumber;
         this.enrolledDate = enrolledDate;
         this.bonusPointBalance = bonusPoints;
         this.name = name;
         this.eMailAddress = eMailAddress;
-        this.password = password;
 
         checkAndSetMembership();
     }

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BonusMemberTest {
     private BonusMember bonusMember = new BonusMember(123, LocalDate.now(), 20000,
-                                          "Jens", "jens@email.com", "passord123");
+                                          "Jens", "jens@email.com");
     @Nested
     @DisplayName("Testing switching from basic to silver membership")
     public class switchingFromBasicToSilverMembership {

@@ -1,4 +1,9 @@
-
+/**
+ * This class extends the membership class and defines the membership
+ * as gold-membership
+ *
+ * @author fredrik
+ */
 public class GoldMembership extends Membership {
 
     private int newBonusPointsBalance;
