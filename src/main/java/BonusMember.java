@@ -47,13 +47,13 @@ public class BonusMember {
 
     public void checkAndSetMembership() {
         if (bonusPointBalance < SILVER_LIMIT) {
-            membership = new BasicMembership(bonusPointBalance);
+            membership = new BasicMembership();
         }
         if (bonusPointBalance >= SILVER_LIMIT && bonusPointBalance < GOLD_LIMIT) {
-            membership = new SilverMembership(bonusPointBalance);
+            membership = new SilverMembership();
         }
         if (bonusPointBalance >= GOLD_LIMIT) {
-            membership = new GoldMembership(bonusPointBalance);
+            membership = new GoldMembership();
         }
         membershipName = membership.getMembershipName();
     }

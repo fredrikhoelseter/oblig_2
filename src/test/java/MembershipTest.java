@@ -12,7 +12,7 @@ public class MembershipTest {
     @DisplayName("Basic-membership tests")
     public class testBasicMembership {
         private int bonusPoints = 1000;
-        private Membership membership = new BasicMembership(bonusPoints);
+        private Membership membership = new BasicMembership();
 
         @Test
         @DisplayName("Bonus points added correctly test")
@@ -31,7 +31,7 @@ public class MembershipTest {
     @DisplayName("Silver-membership tests")
     public class testSilverMembership {
         private int bonusPoints = 30000;
-        private Membership membership = new SilverMembership(bonusPoints);
+        private Membership membership = new SilverMembership();
 
         @Test
         @DisplayName("Bonus points added correctly test")
@@ -50,7 +50,7 @@ public class MembershipTest {
     @DisplayName("Gold-membership tests")
     public class testGoldMembership {
         private int bonusPoints = 80000;
-        private Membership membership = new GoldMembership(bonusPoints);
+        private Membership membership = new GoldMembership();
 
         @Test
         @DisplayName("Bonus points added correctly while under 90 000 bonus points test")

@@ -11,10 +11,6 @@ public class SilverMembership extends Membership {
     private final static String membershipName = "SILVER";
     private final static float POINTS_SCALING_FACTOR = 1.2f;
 
-    public SilverMembership(int bonusPointBalance) {
-        super(bonusPointBalance);
-    }
-
     @Override
     public int RegisterPoints(int bonusPointBalance, int newPoints) {
         newBonusPointsBalance = bonusPointBalance + Math.round(newPoints * POINTS_SCALING_FACTOR);

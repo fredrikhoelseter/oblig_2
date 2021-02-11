@@ -4,21 +4,12 @@
  *
  * @author fredrik
  */
-public class Membership {
+public abstract class Membership {
 
     private int newBonusPointBalance;
     private String membershipName;
     private int bonusPointBalance;
     private int newPoints;
-
-
-    /**
-     * Creates an instance of the Membership
-     * @param bonusPointBalance The bonus points in the membership
-     */
-    public Membership (int bonusPointBalance) {
-        this.bonusPointBalance = bonusPointBalance;
-    }
 
     /**
      * Returns the new bonuspoint balance
@@ -26,17 +17,13 @@ public class Membership {
      * @param newPoints The bonus points to be added
      * @return Returns the new bonus point balance as an integer
      */
-    public int RegisterPoints(int bonusPointBalance, int newPoints) {
-        return newBonusPointBalance;
-    }
+    public abstract int RegisterPoints(int bonusPointBalance, int newPoints);
 
     /**
      * Returns the membership name
      * @return Returns the membership name as a string
      */
-    public String getMembershipName() {
-        return membershipName;
-    }
+    public abstract String getMembershipName();
 
     /**
      * Returns the bonuspoint balance
